@@ -1,0 +1,34 @@
+# Data files (generated)
+data/mock_csv/
+data/parquet/
+data/marts/
+data/dashboard.db
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+
+# Streamlit
+.streamlit/
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db

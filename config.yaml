@@ -1,0 +1,39 @@
+# AdVantage Analytics Pipeline - Configuration
+# Change these values to regenerate data with different parameters
+
+data:
+  seed: 42                          # Fixed seed for reproducible data
+  start_date: "2026-01-01"         # Campaign start date
+  days: 31                          # Number of days of data
+  num_campaigns: 32                 # Total campaigns across all channels
+  num_users: 2000                   # Unique users
+  events_per_day: 1600             # Approximate events per day (50K total)
+  num_conversions: 195             # Total conversion events
+
+# Channel mix for campaigns
+channels:
+  Meta:
+    pct: 0.25                      # 25% of campaigns
+    advertisers: 2
+  Google:
+    pct: 0.25                      # 25% of campaigns
+    advertisers: 2
+  TikTok:
+    pct: 0.125                     # 12.5% of campaigns
+    advertisers: 1
+  Other:
+    pct: 0.375                     # 37.5% of campaigns
+    advertisers: 3
+
+# AWS settings
+# Set mode to "local" for LocalStack (free, no AWS account needed)
+# Set mode to "aws" when you have real AWS credentials
+aws:
+  mode: "local"                    # "local" (LocalStack) or "aws" (real AWS)
+  region: "us-east-1"
+  s3_bucket: "advantage-data"     # S3 bucket name
+  glue_db: "advantage_db"         # Glue database name
+
+# PII masking salt - used for hashing sensitive data
+# In production, rotate this quarterly and store in AWS Secrets Manager
+pii_salt: "advantage_mock_salt_2026_q1"

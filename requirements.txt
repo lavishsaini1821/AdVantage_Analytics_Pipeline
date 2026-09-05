@@ -1,0 +1,21 @@
+# AdVantage Analytics Pipeline - Dependencies
+
+# Data processing
+pandas>=2.0.0
+pyarrow>=14.0.0
+
+# PySpark ETL
+pyspark>=3.5.0
+
+# AWS SDK (for S3, Glue, Athena - boto3 is always needed)
+boto3>=1.34.0
+
+# Dashboard
+streamlit>=1.30.0
+plotly>=6.0.0
+
+# Config
+pyyaml>=6.0
+
+# Testing
+pytest>=7.0.0
